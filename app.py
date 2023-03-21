@@ -39,12 +39,12 @@ DB.create_tables([Prediction], safe=True)
 # Unpickle the previously-trained model
 
 
-with open('columns.json') as fh:
+with open('/tmp/columns.json') as fh:
     columns = json.load(fh)
 
-pipeline = joblib.load('pipeline.pickle')
+pipeline = joblib.load('/tmp/pipeline.pickle')
 
-with open('dtypes.pickle', 'rb') as fh:
+with open('/tmp/dtypes.pickle', 'rb') as fh:
     dtypes = pickle.load(fh)
 
 
